@@ -1,0 +1,41 @@
+<template>
+		<lightning-layout multiple-rows="true">
+			<lightning-layout>
+				<lightning-layout-item flexibility="auto" padding="around-small">
+					<lightning-avatar size="large" variant="circle" src={storeImg} initials="AW"
+						fallback-icon-name="standard:person_account" alternative-text="Amy Weaver"
+						class="slds-align_absolute-center"></lightning-avatar>
+				</lightning-layout-item>
+				<lightning-layout-item flexibility="auto" padding="around-small">
+					<h3 class="slds-text-heading_small">Colruyt Antwerpen</h3>
+					<p class="slds-text-body_regular">Herentalsebaan 57a, 2100 Antwerpen</p>
+				</lightning-layout-item>
+			</lightning-layout>
+
+			<lightning-layout>
+				<lightning-layout-item flexibility="auto" padding="around-small">
+					<lightning-avatar size="large" variant="circle" src={storeManagerImg} initials="AW"
+						fallback-icon-name="standard:person_account" alternative-text="Amy Weaver"
+						class="slds-align_absolute-center"></lightning-avatar>
+				</lightning-layout-item>
+				<lightning-layout-item flexibility="auto" padding="around-small">
+					<h3 class="slds-text-heading_small">Olivia Buyer</h3>
+					<p class="slds-text-body_regular">
+						Store Manager <br>
+						<lightning-icon icon-name="utility:call" alternative-text="Connected" size="xx-small" title="xx-small size">
+						</lightning-icon>
+						<lightning-formatted-phone value="+18005551212"></lightning-formatted-phone><br>
+					</p>
+				</lightning-layout-item>
+			</lightning-layout>
+		</lightning-layout>
+			<hr>
+			<lightning-layout>
+				<lightning-layout-item class="slds-align_absolute-center" flexibility="auto">
+					<lightning-icon icon-name="utility:email" size="small"></lightning-icon>Send Email
+				</lightning-layout-item>
+				<lightning-layout-item onclick={handleStoreNavigate} class="slds-align_absolute-center" flexibility="auto">
+					<lightning-icon icon-name="utility:store" size="small"></lightning-icon>Open Store
+				</lightning-layout-item>
+			</lightning-layout>
+</template>

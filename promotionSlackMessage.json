@@ -1,0 +1,97 @@
+https://app.slack.com/block-kit-builder/T01GST6QY0G#%7B%22blocks%22:%5B%7B%22type%22:%22section%22,%22text%22:%7B%22type%22:%22mrkdwn%22,%22text%22:%22Hello,%20store%20managers!%20For%20the%20upcoming%20month,%20we%20have%20several%20promotions%20around%20our%20Red%20Bull%20products.%20Our%20Sales%20Representatives%20are%20ready%20to%20give%20you%20more%20information%20on%20it%20if%20necessary!%20Should%20you%20be%20interested,%20please%20click%20the%20buttons%20below%20to%20make%20sure%20your%20store%20is%20part%20of%20the%20promotion.%20%5Cn%5Cn%20*This%20month's%20promotions:*%22%7D%7D,%7B%22type%22:%22divider%22%7D,%7B%22type%22:%22section%22,%22text%22:%7B%22type%22:%22mrkdwn%22,%22text%22:%22*Summer%20Splash%20Promotion%20:sun:%20*%5Cn%20Summer%20is%20here%20and%20people%20need%20their%20Energy%20Boost!%20We%20are%20providing%20a%2010%25%20discount%20on%20all%20Red%20Bull%20products!%22%7D,%22accessory%22:%7B%22type%22:%22image%22,%22image_url%22:%22https://i.ibb.co/6J8HtMT/redbullsummer.jpg%22,%22alt_text%22:%22alt%20text%20for%20image%22%7D%7D,%7B%22type%22:%22section%22,%22text%22:%7B%22type%22:%22mrkdwn%22,%22text%22:%22*Special%20Checkout%20Promotion%20:cash:*%5Cn%20Increase%20your%20red%20bull%20sales%20by%20placing%20them%20strategically%20at%20the%20checkout%20with%20our%20new%20Red%20Bull%20promotion%20displays.%22%7D,%22accessory%22:%7B%22type%22:%22image%22,%22image_url%22:%22https://i.ibb.co/zX1kNqh/redbullcheckout.jpg%22,%22alt_text%22:%22alt%20text%20for%20image%22%7D%7D,%7B%22type%22:%22section%22,%22text%22:%7B%22type%22:%22mrkdwn%22,%22text%22:%22*Red%20Bull%20Peach%20Edition%20Launch%20-%20Get%20your%20Free%20:cool:er*%5Cn%20Free%20Delivery%20and%20Installation%20of%20a%20beverage%20cooler%20for%20our%20Red%20Bull%20Energy%20Drinks%20to%20celebrate%20the%20launch%20of%20our%20newest%20addition%20to%20the%20Red%20Bull%20family%20-%20Red%20Bull%20Red%20Edition!%22%7D,%22accessory%22:%7B%22type%22:%22image%22,%22image_url%22:%22https://i.ibb.co/3F8HMz4/redbullfridge.jpg%22,%22alt_text%22:%22alt%20text%20for%20image%22%7D%7D,%7B%22type%22:%22divider%22%7D,%7B%22type%22:%22section%22,%22text%22:%7B%22type%22:%22mrkdwn%22,%22text%22:%22Interested%20in%20a%20promotion?%20Click%20the%20buttons%20below%20so%20that%20your%20sales%20representative%20can%20give%20you%20more%20information%20on%20their%20next%20visit.%22%7D%7D,%7B%22type%22:%22actions%22,%22elements%22:%5B%7B%22type%22:%22button%22,%22text%22:%7B%22type%22:%22plain_text%22,%22text%22:%22Summer%20Splash%20Promotion%22,%22emoji%22:true%7D,%22value%22:%22click_me_123%22,%22action_id%22:%22PromotionSignUp%22%7D,%7B%22type%22:%22button%22,%22text%22:%7B%22type%22:%22plain_text%22,%22text%22:%22Checkout%20Promotion%22,%22emoji%22:true%7D,%22value%22:%22click_me_123%22,%22action_id%22:%22PromotionSignUp2%22%7D,%7B%22type%22:%22button%22,%22text%22:%7B%22type%22:%22plain_text%22,%22text%22:%22Red%20Bull%20Promotion%22,%22emoji%22:true%7D,%22value%22:%22click_me_123%22,%22action_id%22:%22PromotionSignUp3%22%7D%5D%7D%5D%7D
+
+{
+	"blocks": [
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "Hello, store managers! For the upcoming month, we have several promotions around our Red Bull products. Our Sales Representatives are ready to give you more information on it if necessary! Should you be interested, please click the buttons below to make sure your store is part of the promotion. \n\n *This month's promotions:*"
+			}
+		},
+		{
+			"type": "divider"
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "*Summer Splash Promotion :sun: *\n Summer is here and people need their Energy Boost! We are providing a 10% discount on all Red Bull products!"
+			},
+			"accessory": {
+				"type": "image",
+				"image_url": "https://i.ibb.co/6J8HtMT/redbullsummer.jpg",
+				"alt_text": "alt text for image"
+			}
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "*Special Checkout Promotion :cash:*\n Increase your red bull sales by placing them strategically at the checkout with our new Red Bull promotion displays."
+			},
+			"accessory": {
+				"type": "image",
+				"image_url": "https://i.ibb.co/zX1kNqh/redbullcheckout.jpg",
+				"alt_text": "alt text for image"
+			}
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "*Red Bull Peach Edition Launch - Get your Free :cool:er*\n Free Delivery and Installation of a beverage cooler for our Red Bull Energy Drinks to celebrate the launch of our newest addition to the Red Bull family - Red Bull Red Edition!"
+			},
+			"accessory": {
+				"type": "image",
+				"image_url": "https://i.ibb.co/3F8HMz4/redbullfridge.jpg",
+				"alt_text": "alt text for image"
+			}
+		},
+		{
+			"type": "divider"
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "Interested in a promotion? Click the buttons below so that your sales representative can give you more information on their next visit."
+			}
+		},
+		{
+			"type": "actions",
+			"elements": [
+				{
+					"type": "button",
+					"text": {
+						"type": "plain_text",
+						"text": "Summer Splash Promotion",
+						"emoji": true
+					},
+					"value": "click_me_123",
+					"action_id": "PromotionSignUp"
+				},
+				{
+					"type": "button",
+					"text": {
+						"type": "plain_text",
+						"text": "Checkout Promotion",
+						"emoji": true
+					},
+					"value": "click_me_123",
+					"action_id": "PromotionSignUp2"
+				},
+				{
+					"type": "button",
+					"text": {
+						"type": "plain_text",
+						"text": "Red Bull Promotion",
+						"emoji": true
+					},
+					"value": "click_me_123",
+					"action_id": "PromotionSignUp3"
+				}
+			]
+		}
+	]
+}

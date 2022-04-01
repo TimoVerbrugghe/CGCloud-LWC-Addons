@@ -1,0 +1,9 @@
+<template>
+        <lightning-input-rich-text
+            value={noteValue}
+            onchange={handleChange}
+            onblur={handleBlur}
+            formats={allowedFormats} >
+        </lightning-input-rich-text>
+        <p slot="footer" class="slds-text-body_small slds-align_absolute-center"><i>Your visit notes are updated automatically</i></p>
+</template>

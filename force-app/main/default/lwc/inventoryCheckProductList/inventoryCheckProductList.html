@@ -1,0 +1,51 @@
+<template>
+    <lightning-input
+            name="enter-search"
+            type="search"
+            onchange={handleSearch}
+        ></lightning-input>
+    <br>
+    <lightning-layout multiple-rows class="c-container">
+        <template for:each={searchProducts} for:item="product">
+                <!-- First row  - Product info and input fields-->
+                <lightning-layout-item size="1" padding="around-small" key={product.Id}>
+                    <lightning-avatar size="large" src={product.DisplayUrl} variant="circle" class="slds-align_absolute-center"></lightning-avatar>
+                </lightning-layout-item>
+                <lightning-layout-item size="5" padding="around-small" key={product.Id}>
+                    {product.Name}<br>
+                </lightning-layout-item>
+                <lightning-layout-item size="2" padding="around-small" alignment-bump="left" key={product.Id}>
+                    <lightning-combobox
+                        label="Availability"
+                        placeholder="Select Availability"
+                        options={options}
+                        value="available" ></lightning-combobox>
+                </lightning-layout-item>
+                <lightning-layout-item size="2" padding="around-small" key={product.Id}>
+                    <lightning-input type="number" step="0.01" label="Display Price" value="7.19"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="2" padding="around-small" key={product.Id}>
+                    <lightning-input type="number" label="Inventory Count" value="20"></lightning-input>
+                </lightning-layout-item>
+
+
+
+                <!-- Second Row - Pills that showcase value of the previous visits -->
+                <lightning-layout-item size="1" padding="horizontal-small" key={product.Id}>
+                </lightning-layout-item>
+                <lightning-layout-item size="5" padding="horizontal-small" key={product.Id}>
+                    <lightning-badge label="18/02/22" class="slds-badge_inverse"></lightning-badge>
+                </lightning-layout-item>
+                <lightning-layout-item size="2" padding="horizontal-small" alignment-bump="left" key={product.Id}>
+                        <lightning-badge label="Available" class="slds-badge_inverse"></lightning-badge>
+                </lightning-layout-item>
+                <lightning-layout-item size="2" padding="horizontal-small" key={product.Id}>
+                    <lightning-badge label="7.19" class="slds-badge_inverse"></lightning-badge>
+                </lightning-layout-item>
+                <lightning-layout-item size="2" padding="horizontal-small" alignment-bump="left" key={product.Id}>
+                    <lightning-badge label="20" class="slds-badge_inverse"></lightning-badge>
+                </lightning-layout-item>
+                <hr key={product.Id}>
+        </template>
+    </lightning-layout>
+</template>

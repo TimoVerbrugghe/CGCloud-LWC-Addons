@@ -1,0 +1,27 @@
+<template>
+    <lightning-card>
+    <lightning-accordion allow-multiple-sections-open active-section-name="Quick Access">
+        <lightning-accordion-section name="Quick Access" label="Quick Access">
+    <lightning-layout multiple-rows="true">
+        <lightning-layout-item size="3" padding="around-small">
+            <lightning-avatar size="large" variant="circle" src={whatsAppImg} initials="AW"
+                fallback-icon-name="standard:person_account" alternative-text="Amy Weaver"
+                class="slds-align_absolute-center"></lightning-avatar>
+        </lightning-layout-item>
+        <lightning-layout-item size="8" padding="around-small">
+            <h3 class="slds-text-heading_small"> Whatsapp </h3>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="3" padding="around-small">
+            <a href={slackUrl}><lightning-avatar size="large" variant="circle" src={slackImg} initials="AW"
+                fallback-icon-name="standard:person_account" alternative-text="Amy Weaver"
+                class="slds-align_absolute-center"></lightning-avatar></a>
+        </lightning-layout-item>
+        <lightning-layout-item size="8" padding="around-small">
+            <h3 class="slds-text-heading_small"> Slack </h3>
+        </lightning-layout-item>
+    </lightning-layout>
+</lightning-accordion-section>
+</lightning-accordion>
+</lightning-card>
+</template>

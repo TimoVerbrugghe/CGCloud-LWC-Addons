@@ -1,0 +1,29 @@
+<template>
+    <lightning-card>
+    <lightning-accordion allow-multiple-sections-open active-section-name="Summary">
+        <lightning-accordion-section name="Summary" label="Summary">
+            <lightning-layout multiple-rows="true">
+                <lightning-layout-item size="3" padding="around-small">
+                    <lightning-avatar size="large" variant="circle" src={repImg} initials="AW"
+                        fallback-icon-name="standard:person_account" alternative-text="Amy Weaver"
+                        class="slds-align_absolute-center"></lightning-avatar>
+                </lightning-layout-item>
+                <lightning-layout-item size="9" alignment-bump="right" padding="around-small">
+                    <h3 class="slds-text-heading_small"> Chantelle Rep </h3>
+                    <p class="slds-text-body_regular">Have a great day.</p>
+                </lightning-layout-item>
+
+                <lightning-layout-item size="3" padding="around-small">
+                    <lightning-button-icon icon-name="utility:left" size="medium" title="Left"></lightning-button-icon>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <p class="slds-text-body_regular slds-align_absolute-center">Thursday, 31 March</p>
+                </lightning-layout-item>
+                <lightning-layout-item size="3" padding="around-small">
+                    <lightning-button-icon icon-name="utility:right" size="medium" title="Left"></lightning-button-icon>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-accordion-section>
+    </lightning-accordion>
+</lightning-card>
+</template>

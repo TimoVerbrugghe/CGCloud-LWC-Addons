@@ -1,0 +1,44 @@
+<apex:page standardController="Promotion" recordSetVar="promotions" extensions="promotionsSlackController" lightningStylesheets="True">
+        <apex:slds />
+        <!-- LEFT({!$Api.Partner_Server_URL_260}, FIND( '/services', {!$Api.Partner_Server_URL_260})) -->
+        <!-- LEFT( {!$Flow.FaultMessage}, Find("You can look up ExceptionCode", {!$Flow.FaultMessage} ) -1) -->
+        <apex:pageBlock title="Selected Promotions">
+            <apex:pageBlockTable value="{!selectedPromotionRecords}" var="promotion">
+                <apex:column headerValue="Name" 		value="{!promotion.Name}" />
+                <apex:column headerValue="Category" 		value="{!promotion.Category}" />
+                <apex:column headerValue="Start Date" 		value="{!promotion.StartDate}" />
+                <apex:column headerValue="End Date" 		value="{!promotion.EndDate}" />
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:pageBlock>
+            <html>
+      <head>
+         <apex:includeLightning />
+      </head>
+      <body class="slds-scope">
+         <div id="flowContainer" />
+         <script>
+            var statusChange = function (event) {
+               if(event.getParam("status") === "FINISHED") {
+                  
+               }
+            };
+            $Lightning.use("c:lightningOutApp", function() {
+               // Create the flow component and set the onstatuschange attribute
+               $Lightning.createComponent("lightning:flow", {"onstatuschange":statusChange},
+                  "flowContainer",
+                  function (component) {
+                     // Set the input variables
+                     
+                     
+                     // Start an interview in the flowContainer div, and 
+                     // initializes the input variables.
+                     component.startFlow("Send_Promotions_To_Slack");
+                  }
+               );
+            });
+         </script>
+      </body>
+   </html>
+</apex:pageBlock>
+</apex:page>
