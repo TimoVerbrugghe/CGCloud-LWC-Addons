@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>sendToSlack</members>
+		<name>ApexPage</name>
+	</types>
+	<types>
+		<members>Visit.Visit_Note__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>CGC_Tablet_Overview</members>
+		<members>Test_Adv_Promotion_Planning</members>
+		<members>Test_CG_Cloud_Products</members>
+		<members>Your_Day</members>
+		<name>FlexiPage</name>
+	</types>
+	<types>
+		<members>Send_Promotions_to_Slack</members>
+		<name>Flow</name>
+	</types>
+	<types>
+		<members>Promotion.Send_to_Slack</members>
+		<name>WebLink</name>
+	</types>
+	<version>53.0</version>
+</Package>

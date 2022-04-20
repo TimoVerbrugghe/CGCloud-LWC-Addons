@@ -1,0 +1,41 @@
+<template>
+    <lightning-layout multiple-rows="true" class="c-container">
+        <lightning-layout-item size="1" padding="around-small"></lightning-layout-item>
+        <lightning-layout-item size="2" padding="around-small" class="slds-align_absolute-center">ITM</lightning-layout-item>
+        <lightning-layout-item size="2" padding="around-small" class="slds-align_absolute-center">MestDagh</lightning-layout-item>
+        <lightning-layout-item size="2" padding="around-small" class="slds-align_absolute-center">Match</lightning-layout-item>
+        <lightning-layout-item size="2" padding="around-small" class="slds-align_absolute-center">CRF</lightning-layout-item>
+        <lightning-layout-item size="2" padding="around-small" class="slds-align_absolute-center">Delhaize</lightning-layout-item>
+        <lightning-layout-item size="1" padding="around-small" class="slds-align_absolute-center">Total</lightning-layout-item>
+
+
+        <template for:each={searchReps} for:item="rep">
+            <lightning-layout-item size="1" key={rep.Id} padding="around-small" class="slds-align_absolute-center">{rep.Name}</lightning-layout-item>
+            <lightning-layout-item size="2" key={rep.Id} padding="around-small" class="slds-align_absolute-center">
+                <lightning-input type="number" step="1" value="5"></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="2" key={rep.Id} padding="around-small" class="slds-align_absolute-center">
+                <lightning-input type="number" step="1" value="5"></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="2" key={rep.Id} padding="around-small" class="slds-align_absolute-center">
+                <lightning-input type="number" step="1" value="5"></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="2" key={rep.Id} padding="around-small" class="slds-align_absolute-center">
+                <lightning-input type="number" step="1" value="5"></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="2" key={rep.Id} padding="around-small" class="slds-align_absolute-center">
+                <lightning-input type="number" step="1" value="5"></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="1" key={rep.Id} padding="around-small" class="slds-align_absolute-center">56</lightning-layout-item>
+        </template>
+        
+            <lightning-layout-item size="1" padding="around-small" class="slds-align_absolute-center">% of POS covered</lightning-layout-item>
+            <lightning-layout-item size="2" padding="around-small" class="slds-align_absolute-center">61 %</lightning-layout-item>
+            <lightning-layout-item size="2" padding="around-small" class="slds-align_absolute-center">65 %</lightning-layout-item>
+            <lightning-layout-item size="2" padding="around-small" class="slds-align_absolute-center">92 %</lightning-layout-item>
+            <lightning-layout-item size="2" padding="around-small" class="slds-align_absolute-center">61 %</lightning-layout-item>
+            <lightning-layout-item size="2" padding="around-small" class="slds-align_absolute-center">65 %</lightning-layout-item>
+            <lightning-layout-item size="1" padding="around-small" class="slds-align_absolute-center"></lightning-layout-item>
+        
+    </lightning-layout>
+</template>

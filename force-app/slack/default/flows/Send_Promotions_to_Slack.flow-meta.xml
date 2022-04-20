@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <interviewLabel>Send Promotions to Slack {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Send Promotions to Slack</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Send_Promotions</name>
+        <label>Send Promotions</label>
+        <locationX>176</locationX>
+        <locationY>278</locationY>
+        <inputAssignments>
+            <field>timoverbrugghe__Message__c</field>
+            <value>
+                <elementReference>slackMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>timoverbrugghe__Slack_Channel__c</field>
+            <value>
+                <elementReference>slackChannelId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>timoverbrugghe__Slack_Message__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <screens>
+        <name>Send_to_Slack</name>
+        <label>Send to Slack</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Send_Promotions</targetReference>
+        </connector>
+        <fields>
+            <name>Type_your_message_to_accompany_the_Promotion_information</name>
+            <fieldText>Message</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>SlackChannel</name>
+            <extensionName>flowruntime:lookup</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Slack Channel</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>objectApiName</name>
+                <value>
+                    <stringValue>timoverbrugghe__Slack_Message__c</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>fieldApiName</name>
+                <value>
+                    <stringValue>timoverbrugghe__Slack_Channel__c</stringValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <nextOrFinishButtonLabel>Send</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Send_to_Slack</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>slackMessage</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>{
+	&quot;blocks&quot;: [
+		{
+			&quot;type&quot;: &quot;section&quot;,
+			&quot;text&quot;: {
+				&quot;type&quot;: &quot;mrkdwn&quot;,
+				&quot;text&quot;: &quot;Hello, store managers! For the upcoming month, we have several promotions around our Red Bull products. Our Sales Representatives are ready to give you more information on it if necessary! Should you be interested, please click the buttons below to make sure your store is part of the promotion. \n\n *This month&apos;s promotions:*&quot;
+			}
+		},
+		{
+			&quot;type&quot;: &quot;divider&quot;
+		},
+		{
+			&quot;type&quot;: &quot;section&quot;,
+			&quot;text&quot;: {
+				&quot;type&quot;: &quot;mrkdwn&quot;,
+				&quot;text&quot;: &quot;*Summer Splash Promotion :sun: *\n Summer is here and people need their Energy Boost! We are providing a 10% discount on all Red Bull products!&quot;
+			},
+			&quot;accessory&quot;: {
+				&quot;type&quot;: &quot;image&quot;,
+				&quot;image_url&quot;: &quot;https://i.ibb.co/6J8HtMT/redbullsummer.jpg&quot;,
+				&quot;alt_text&quot;: &quot;alt text for image&quot;
+			}
+		},
+		{
+			&quot;type&quot;: &quot;section&quot;,
+			&quot;text&quot;: {
+				&quot;type&quot;: &quot;mrkdwn&quot;,
+				&quot;text&quot;: &quot;*Special Checkout Promotion :moneybag:*\n Increase your red bull sales by placing them strategically at the checkout with our new Red Bull promotion displays.&quot;
+			},
+			&quot;accessory&quot;: {
+				&quot;type&quot;: &quot;image&quot;,
+				&quot;image_url&quot;: &quot;https://i.ibb.co/zX1kNqh/redbullcheckout.jpg&quot;,
+				&quot;alt_text&quot;: &quot;alt text for image&quot;
+			}
+		},
+		{
+			&quot;type&quot;: &quot;section&quot;,
+			&quot;text&quot;: {
+				&quot;type&quot;: &quot;mrkdwn&quot;,
+				&quot;text&quot;: &quot;*Red Bull Peach Edition Launch - Get your Free :cool:er*\n Free Delivery and Installation of a beverage cooler for our Red Bull Energy Drinks to celebrate the launch of our newest addition to the Red Bull family - Red Bull Red Edition!&quot;
+			},
+			&quot;accessory&quot;: {
+				&quot;type&quot;: &quot;image&quot;,
+				&quot;image_url&quot;: &quot;https://i.ibb.co/3F8HMz4/redbullfridge.jpg&quot;,
+				&quot;alt_text&quot;: &quot;alt text for image&quot;
+			}
+		},
+		{
+			&quot;type&quot;: &quot;divider&quot;
+		},
+		{
+			&quot;type&quot;: &quot;section&quot;,
+			&quot;text&quot;: {
+				&quot;type&quot;: &quot;mrkdwn&quot;,
+				&quot;text&quot;: &quot;Interested in a promotion? Click the buttons below so that your sales representative can give you more information on their next visit.&quot;
+			}
+		},
+		{
+			&quot;type&quot;: &quot;actions&quot;,
+			&quot;elements&quot;: [
+				{
+					&quot;type&quot;: &quot;button&quot;,
+					&quot;text&quot;: {
+						&quot;type&quot;: &quot;plain_text&quot;,
+						&quot;text&quot;: &quot;Summer Splash Promotion&quot;,
+						&quot;emoji&quot;: true
+					},
+					&quot;value&quot;: &quot;click_me_123&quot;,
+					&quot;action_id&quot;: &quot;PromotionSignUp&quot;
+				},
+				{
+					&quot;type&quot;: &quot;button&quot;,
+					&quot;text&quot;: {
+						&quot;type&quot;: &quot;plain_text&quot;,
+						&quot;text&quot;: &quot;Checkout Promotion&quot;,
+						&quot;emoji&quot;: true
+					},
+					&quot;value&quot;: &quot;click_me_123&quot;,
+					&quot;action_id&quot;: &quot;PromotionSignUp2&quot;
+				},
+				{
+					&quot;type&quot;: &quot;button&quot;,
+					&quot;text&quot;: {
+						&quot;type&quot;: &quot;plain_text&quot;,
+						&quot;text&quot;: &quot;Red Bull Promotion&quot;,
+						&quot;emoji&quot;: true
+					},
+					&quot;value&quot;: &quot;click_me_123&quot;,
+					&quot;action_id&quot;: &quot;PromotionSignUp3&quot;
+				}
+			]
+		}
+	]
+}</text>
+    </textTemplates>
+    <variables>
+        <name>slackChannelId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>aDw7Q00000001dsSAA</stringValue>
+        </value>
+    </variables>
+</Flow>

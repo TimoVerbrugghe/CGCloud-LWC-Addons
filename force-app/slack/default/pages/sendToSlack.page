@@ -4,13 +4,13 @@
         <!-- LEFT( {!$Flow.FaultMessage}, Find("You can look up ExceptionCode", {!$Flow.FaultMessage} ) -1) -->
         <apex:pageBlock title="Selected Promotions">
             <apex:pageBlockTable value="{!selectedPromotionRecords}" var="promotion">
-                <apex:column headerValue="Name" 		value="{!promotion.Name}" />
-                <apex:column headerValue="Category" 		value="{!promotion.Category}" />
-                <apex:column headerValue="Start Date" 		value="{!promotion.StartDate}" />
-                <apex:column headerValue="End Date" 		value="{!promotion.EndDate}" />
+                <apex:column headerValue="Name"         value="{!promotion.Name}" />
+                <apex:column headerValue="Category"         value="{!promotion.Category}" />
+                <apex:column headerValue="Start Date"       value="{!promotion.StartDate}" />
+                <apex:column headerValue="End Date"         value="{!promotion.EndDate}" />
             </apex:pageBlockTable>
         </apex:pageBlock>
-        <apex:pageBlock>
+        <apex:pageBlock >
             <html>
       <head>
          <apex:includeLightning />
