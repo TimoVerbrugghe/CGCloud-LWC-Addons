@@ -1,0 +1,38 @@
+<template>
+    <br>
+    <br>
+    <article class="slds-card">
+        <div class="slds-grid slds-einstein-header slds-card__header">
+          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <div class="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3">
+              <div class="slds-media__body">
+                <h2 class="slds-truncate" title="Einstein (10+)">
+                  <a href="#" class="slds-card__header-link" title="Einstein (10+)">
+                    <span class="slds-text-heading_small">Einstein Insights (2)</span>
+                  </a>
+                </h2>
+              </div>
+            </div>
+            <div class="slds-einstein-header__figure slds-size_1-of-4 slds-medium-size_1-of-3"></div>
+          </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="slds-p-horizontal_small">
+            <lightning-layout multiple-rows>
+                <lightning-layout-item size="12" padding="around-small">
+                    <b>Based on information you entered during this visit, Einstein recommends the following</b>
+                </lightning-layout-item>
+                <lightning-layout-item size="1" padding="around-small">
+                    <lightning-avatar variant="circle" src="https://www.lightningdesignsystem.com/assets/images/avatar2.jpg" initials="AW" fallback-icon-name="standard:person_account" alternative-text="Amy Weaver" class="slds-m-right_small"></lightning-avatar>
+                </lightning-layout-item>
+                <lightning-layout-item size="9" padding="around-small">
+                    Some text goes here
+                </lightning-layout-item>
+                <lightning-layout-item size="2" padding="around-small">
+                    <lightning-button variant="brand" label="+ Add Product" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+        </div>
+      </article>
+</template>

@@ -1,18 +1,18 @@
 <template>
-    <lightning-layout multiple-rows="true" class="c-container">
+    <lightning-card title="Suggested Planning" icon-name="standard:shift_pattern">
+    <lightning-layout multiple-rows="true">
         <lightning-layout-item size="1" padding="around-small"></lightning-layout-item>
-        <lightning-layout-item size="2" padding="around-small" class="slds-align_absolute-center">ITM</lightning-layout-item>
-        <lightning-layout-item size="2" padding="around-small" class="slds-align_absolute-center">MestDagh</lightning-layout-item>
-        <lightning-layout-item size="2" padding="around-small" class="slds-align_absolute-center">Match</lightning-layout-item>
-        <lightning-layout-item size="2" padding="around-small" class="slds-align_absolute-center">CRF</lightning-layout-item>
-        <lightning-layout-item size="2" padding="around-small" class="slds-align_absolute-center">Delhaize</lightning-layout-item>
-        <lightning-layout-item size="1" padding="around-small" class="slds-align_absolute-center">Total</lightning-layout-item>
-
+        <lightning-layout-item size="2" padding="around-small" class="slds-align_absolute-center slds-text-heading_small"><b>ITM</b></lightning-layout-item>
+        <lightning-layout-item size="2" padding="around-small" class="slds-align_absolute-center slds-text-heading_small"><b>MestDagh</b></lightning-layout-item>
+        <lightning-layout-item size="2" padding="around-small" class="slds-align_absolute-center slds-text-heading_small"><b>Match</b></lightning-layout-item>
+        <lightning-layout-item size="2" padding="around-small" class="slds-align_absolute-center slds-text-heading_small"><b>CRF</b></lightning-layout-item>
+        <lightning-layout-item size="2" padding="around-small" class="slds-align_absolute-center slds-text-heading_small"><b>Delhaize</b></lightning-layout-item>
+        <lightning-layout-item size="1" padding="around-small" class="slds-align_absolute-center slds-text-heading_small"><b>Total</b></lightning-layout-item>
 
         <template for:each={searchReps} for:item="rep">
             <lightning-layout-item size="1" key={rep.Id} padding="around-small" class="slds-align_absolute-center">{rep.Name}</lightning-layout-item>
             <lightning-layout-item size="2" key={rep.Id} padding="around-small" class="slds-align_absolute-center">
-                <lightning-input type="number" step="1" value="5"></lightning-input>
+                <lightning-input onblur={handleTestChange} name="Store1VisitAmount" id={rep.Id} type="number" step="1" value={rep.Store1VisitAmount}></lightning-input>
             </lightning-layout-item>
             <lightning-layout-item size="2" key={rep.Id} padding="around-small" class="slds-align_absolute-center">
                 <lightning-input type="number" step="1" value="5"></lightning-input>
@@ -26,7 +26,7 @@
             <lightning-layout-item size="2" key={rep.Id} padding="around-small" class="slds-align_absolute-center">
                 <lightning-input type="number" step="1" value="5"></lightning-input>
             </lightning-layout-item>
-            <lightning-layout-item size="1" key={rep.Id} padding="around-small" class="slds-align_absolute-center">56</lightning-layout-item>
+            <lightning-layout-item size="1" key={rep.Id} padding="around-small" class="slds-align_absolute-center">{rep.Total}</lightning-layout-item>
         </template>
         
             <lightning-layout-item size="1" padding="around-small" class="slds-align_absolute-center">% of POS covered</lightning-layout-item>
@@ -38,4 +38,5 @@
             <lightning-layout-item size="1" padding="around-small" class="slds-align_absolute-center"></lightning-layout-item>
         
     </lightning-layout>
+    </lightning-card>
 </template>

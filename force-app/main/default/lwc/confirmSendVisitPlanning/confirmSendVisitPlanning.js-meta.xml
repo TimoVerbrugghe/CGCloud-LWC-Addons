@@ -5,11 +5,11 @@
     <targets>
         <target>lightning__AppPage</target>
         <target>lightning__FlowScreen</target>
-        <target>lightning__RecordPage</target>
+        <target>lightning__RecordAction</target>
     </targets>
     <targetConfigs>
-        <targetConfig targets="lightning__RecordPage">
-            <objects><object>Week_Plan__c</object></objects>
+        <targetConfig targets="lightning__RecordAction">
+          <actionType>ScreenAction</actionType>
         </targetConfig>
-    </targetConfigs>
+      </targetConfigs>
 </LightningComponentBundle>
